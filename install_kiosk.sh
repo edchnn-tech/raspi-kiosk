@@ -3,7 +3,7 @@ cat > install_kiosk.sh <<'EOF'
 set -euo pipefail
 
 # === Instellingen ===
-PI_USER="${PI_USER:-admin}"                            # pas aan als je andere gebruikersnaam hebt
+PI_USER="${PI_USER:-pi}"                            # pas aan als je andere gebruikersnaam hebt
 KIOSK_DIR="/home/${PI_USER}/kiosk"
 INDEX_FILE="${KIOSK_DIR}/index.html"
 XINITRC="/home/${PI_USER}/.xinitrc"
