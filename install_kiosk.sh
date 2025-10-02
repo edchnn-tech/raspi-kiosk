@@ -355,8 +355,7 @@ prepare_kiosk_files() {
 
     <script>
         // SIMULATIE MODUS - Zet op true om het 1e uur te simuleren
-        const SIMULATION_MODE = true
-          ;
+        const SIMULATION_MODE = false;
         const SIMULATED_START_TIME = "08:02"; // Start simulatie op dit tijdstip
         let simulationStartRealTime = null; // Wanneer de simulatie begon (echte tijd)
 
