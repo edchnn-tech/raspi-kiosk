@@ -3,7 +3,7 @@ cat > install_kiosk.sh <<'EOF'
 set -euo pipefail
 
 # === Instellingen ===
-PI_USER="${PI_USER:-pi}"                            # pas aan als je andere gebruikersnaam hebt
+PI_USER="${PI_USER:-admin}"                            # pas aan als je andere gebruikersnaam hebt
 KIOSK_DIR="/home/${PI_USER}/kiosk"
 INDEX_FILE="${KIOSK_DIR}/index.html"
 XINITRC="/home/${PI_USER}/.xinitrc"
@@ -12,7 +12,7 @@ SERVICE_FILE="/etc/systemd/system/kiosk.service"
 CONFIG_TXT="/boot/firmware/config.txt"              # Raspberry Pi OS Bookworm
 CMDLINE_TXT="/boot/firmware/cmdline.txt"
 REFLECT="${REFLECT:-x}"                             # 'x' = links↔rechts spiegelen; 'y' = ondersteboven
-CHROMIUM_BIN="chromium-browser"                     # fallback beneden als niet bestaat
+CHROMIUM_BIN="chromium-browser"         
 
 require_root() {
   if [[ "$(id -u)" -ne 0 ]]; then
